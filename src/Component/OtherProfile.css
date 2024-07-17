@@ -1,0 +1,9 @@
+.Otherprofilectn{
+    display: flex;
+}
+@media (max-width:700px){
+    .Otherprofilectn{
+        display: flex;
+        flex-direction: column;
+    }  
+}

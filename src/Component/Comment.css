@@ -1,0 +1,67 @@
+.Commentctn{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(12, 12, 12,0.7);
+    position: fixed;
+    z-index: 2;
+
+   
+}
+.crossbtn{
+   
+    color: chocolate;
+    
+    cursor: pointer;
+}
+.commentHeadline{
+    font-size: 25px;
+    color: chocolate;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.commentdisplay{
+    z-index: 1;
+    width: 500px;
+   background-color: white;
+    box-shadow: 0 0 20px rgb(224, 142, 84);
+    position: relative;
+    border-radius: 5px;
+    top: 50px;
+}
+.commentmessagectn{
+    height: 60vh;
+    width: 100%;
+    background-color: white;
+   overflow: auto;
+    box-shadow: 0 0 20px rgb(224, 142, 84);
+}
+.commentname{
+    text-align: left;
+    padding: 5px;
+    color: white;
+    background-color: chocolate;
+}
+.commentMessage{
+    text-align: left;
+}
+.inputctn{
+    display: flex;  
+  
+}
+.Commentinput{
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 18px;
+    padding: 5px;
+}
+.commentbtn{
+    padding: 0 5px;
+}
+@media (max-width:600px){
+    .commentdisplay{
+        width: 300px;
+    }
+}

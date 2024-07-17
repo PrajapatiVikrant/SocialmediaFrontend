@@ -1,0 +1,41 @@
+.miniprofilecard{
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    
+    box-shadow: 0 0 3px chocolate;
+}
+
+.profileImage{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.smallRole{
+    color: rgb(232, 176, 136);
+    font-size: 13px;
+}
+.name{
+    font-size: 18px;
+    text-align: left;
+}
+.nameRole{
+    margin: 5px;
+}
+.accept{
+    padding: 5px 14px;
+    color: white;
+    background-color: blue;
+    border: none;
+    cursor: pointer;
+}
+.accept:hover{
+    background-color: rgb(156, 156, 236);
+}
+.profileDetail{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+   
+}

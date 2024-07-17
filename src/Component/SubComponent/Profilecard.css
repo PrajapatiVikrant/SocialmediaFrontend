@@ -1,0 +1,136 @@
+.Profilectn{
+    display: flex;
+}
+.ProfileSection1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: fit-content;
+    height: fit-content;
+    margin: 15px;
+    padding: 8px;
+  
+    box-shadow: 0 0 10px rgb(224, 142, 84);
+
+}
+.ProfileSection1:hover{
+    box-shadow: 5px 5px 10px rgb(224, 142, 84);
+}
+.profileimage{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+.profileText{
+    padding: 15px;
+}
+.connetion_follower{
+    display: flex;
+    justify-content: space-between;
+   
+    color: burlywood;
+    width: 225px;
+}
+.connetionbtn_followerbtn{
+    display: flex;
+    justify-content: space-between;
+   
+    color: burlywood;
+    width: 225px;
+}
+.connetionconnectionbtn{
+    font-size: 14px;
+    background-color: rgb(51, 51, 207);
+    border: none;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.connetionconnectionbtn:hover{
+    background-color: rgb(142, 142, 216);
+}
+.ProfileName{
+    font-size: 25px;
+    font-weight:600;
+}
+.role{
+    margin-top: 10px;
+    color: brown;
+    font-weight: 500;
+    font-size: 18px;
+}
+.editbtn{
+    position: relative;
+    left: 200px;
+    top: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+.hiddenEditbtn{
+    display: none;
+}
+
+.profile-item1:hover{
+    text-decoration: underline;
+}
+@media (max-width:495px){
+    .profileimage{
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+    } 
+    .connetion_follower{
+        display: flex;
+        justify-content: space-between;
+       
+        color: burlywood;
+        width: 200px;
+    }
+    .ProfileName{
+        font-size: 18px;
+    }
+    .role{
+        font-size: 14px;
+    }
+    .Profilectn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .ProfileSection1{
+        width: 90%;
+
+    }
+}
+@media (max-width:900px ) and (min-width:495px){
+    .profileimage{
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+    } 
+    .connetion_follower{
+        display: flex;
+        justify-content: space-between;
+       
+        color: burlywood;
+        width: 200px;
+    }
+    .ProfileName{
+        font-size: 25px;
+    }
+    .role{
+        font-size: 18px;
+    }
+    .Profilectn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .ProfileSection1{
+        width: 90%;
+      
+    }
+}

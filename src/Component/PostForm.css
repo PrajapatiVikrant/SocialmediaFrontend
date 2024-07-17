@@ -1,0 +1,36 @@
+.postFormCtn{
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+.postFrom{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgb(247, 204, 174);
+    padding: 20px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 20px;
+}
+.postbtn{
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+    background-color: chocolate;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.postbtn:disabled{
+    background-color: rgb(243, 186, 146);
+    cursor: auto;
+}
+.postimage{
+    width: 100%;
+    cursor: pointer;
+  
+}
+#mypostimage{
+   display: none;
+}

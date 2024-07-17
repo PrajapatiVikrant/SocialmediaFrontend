@@ -1,0 +1,74 @@
+.formctn{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+p{
+    text-align: center;
+}
+
+.loginSignupFrom{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgb(247, 204, 174);
+    padding: 20px;
+    border-radius: 5px;
+    width: 350px;
+}
+.forminput{
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+}
+.passwordinput{
+    width: 72%;
+    margin: 10px 0px 10px 10px;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.showhidebtn{
+    display: inline;
+    padding: 12px;
+    font-size: 14px;
+    background-color: rgb(224, 132, 65);
+    border: none;
+    cursor: pointer;
+    color:white;
+}
+.showhidebtndisabled{
+    display: inline;
+    padding: 12px;
+    font-size: 14px;
+    background-color: rgb(243, 186, 146);
+    cursor: auto;
+    border: none;
+    color:white;
+}
+.loginSignBtn{
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+    background-color: rgb(224, 132, 65);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.loginSignBtndisabled{
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+    background-color: rgb(243, 186, 146);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
