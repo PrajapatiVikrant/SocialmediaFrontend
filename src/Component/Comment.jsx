@@ -10,7 +10,7 @@ function Comment(){
         return state.CommentData
     })
     async function postComment(){
-         const data = await axios.post(`https://black-chef-tktuc.pwskills.app:4000/socialmedia/post/comment/${commentdata.post_id}?token=${localStorage.getItem('token')}&message=${comment}`)
+         const data = await axios.post(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/post/comment/${commentdata.post_id}?token=${localStorage.getItem('token')}&message=${comment}`)
          console.log(data.data.message)
          dispatch(UpdatedCommentData({
             post_id:commentdata.post_id,

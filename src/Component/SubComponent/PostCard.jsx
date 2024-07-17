@@ -32,7 +32,7 @@ function PostCard({name,title,url,me,like,id,setupdate}){
     console.log(url)
     if(sure){
         
-         const data = await axios.delete(`https://black-chef-tktuc.pwskills.app:4000/socialmedia/post/delete/${id}?post_url=${url}`);
+         const data = await axios.delete(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/post/delete/${id}?post_url=${url}`);
 
         alert(data.data.message)
         setupdate(true)
@@ -54,7 +54,7 @@ function PostCard({name,title,url,me,like,id,setupdate}){
         
    }
   async function CommentOpen(){
-    const data = await axios.get(`https://black-chef-tktuc.pwskills.app:4000/socialmedia/post/showcomments/${id}`);
+    const data = await axios.get(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/post/showcomments/${id}`);
     console.log(data.data)
     dispatch(UpdatedCommentData(data.data));
     document.getElementById('commentctn').style.display= "block"

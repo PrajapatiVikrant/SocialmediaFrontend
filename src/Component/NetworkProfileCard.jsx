@@ -16,12 +16,12 @@ function NetworkProfileCard({id}){
         getdata()
       },[])
       async function getdata(){
-        const data = await axios.get(`https://black-chef-tktuc.pwskills.app:4000/socialmedia/profile/${id}`)
+        const data = await axios.get(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/profile/${id}`)
         console.log(data)
         setProfile(data.data);
       }
       async function Message(){
-        const data = await axios.get(`https://black-chef-tktuc.pwskills.app:4000/socialmedia/message/${profile.id}?token=${localStorage.getItem('token')}`);
+        const data = await axios.get(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/message/${profile.id}?token=${localStorage.getItem('token')}`);
         if(data.data.message !== "Please connect first"){
          
           dispatch(UpdateMessageData({

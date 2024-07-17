@@ -11,7 +11,7 @@ function ShowNetwork({ id }) {
     },[])
     async function getdata() {
 
-        const data = await axios.get(`https://black-chef-tktuc.pwskills.app:4000/socialmedia/profile?token=${localStorage.getItem('token')}`)
+        const data = await axios.get(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/profile?token=${localStorage.getItem('token')}`)
         console.log(data.data)
         setconnection(data.data.connection)
        

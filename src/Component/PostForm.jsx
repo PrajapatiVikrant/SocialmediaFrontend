@@ -40,7 +40,7 @@ function PostForm(){
   async function postSubmit(e){
     console.log(postimage)
     e.preventDefault()
-      const data =  await axios.post(`https://black-chef-tktuc.pwskills.app:4000/socialmedia/post/create?title=${postttitle}&token=${localStorage.getItem('token')}`,postimage,{
+      const data =  await axios.post(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/post/create?title=${postttitle}&token=${localStorage.getItem('token')}`,postimage,{
         headers:{
             "Content-Type":"multipart/form-data",
         }

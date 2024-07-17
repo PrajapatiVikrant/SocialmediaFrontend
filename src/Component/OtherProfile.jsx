@@ -16,7 +16,7 @@ function OtherProfile(){
     getPost()
   },[])
   async function getPost(){
-        const data = await axios.get(`https://black-chef-tktuc.pwskills.app:4000/socialmedia/post/read/${profiledata.id}`)
+        const data = await axios.get(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/post/read/${profiledata.id}`)
         setpost(data.data.message)
   }
    

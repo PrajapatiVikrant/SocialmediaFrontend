@@ -14,7 +14,7 @@ function Signup() {
         e.preventDefault();
         try {
             
-            const data = await axios.post(`https://black-chef-tktuc.pwskills.app:4000/socialmedia/auth/signup?name=${name}&email=${email}&title=${title}&password=${password}`)
+            const data = await axios.post(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/auth/signup?name=${name}&email=${email}&title=${title}&password=${password}`)
             console.log(data.data.message)
             if(data.data.message==="Signup successfully"){
                 
