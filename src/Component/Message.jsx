@@ -1,56 +1,56 @@
 import React from "react";
 import { useEffect } from "react";
 import "./Message.css"
-import { io } from "socket.io-client";
 import { useDispatch, useSelector } from "react-redux";
 import { UpdateMessageData } from "../State/Slice/MessageDataSlice";
 import { useState } from "react";
-const socket = io('https://socialmedia-backend-two.vercel.app');
+import axios from "axios";
 function Message() {
     const [messageInput,setMessageInput] = useState('')
-    const [scroll,setscroll] = useState(0)
+    const [update,setupdate] = useState('');
     const messagedata = useSelector((state)=>{
       return state.MessageData;
     })
     const dispatch = useDispatch();
     useEffect(() => {
-        
-        socket.emit('getdata',{user_id1:localStorage.getItem('user1'),user_id2:localStorage.getItem('user2')})
-        socket.on('messagearray', (data) => {
-            dispatch(UpdateMessageData({
-                user_name:localStorage.getItem('user_name'),
-                messageBox:data
-              }))
-        })
-    }, [])
-    function clearAllChat(){
+         getdata();
+    })
+   async function getdata(){
+          update
+          const data = await axios.get(`https://socialmedia-backend-two.vercel.app/socialmedia/message/${localStorage.getItem('user1')}/${localStorage.getItem('user2')}`);
+          dispatch(UpdateMessageData({
+            user_name:localStorage.getItem('user_name'),
+            messageBox:data.data
+          }))
+          setupdate('update')
+    }
+   async function clearAllChat(){
        const data =  confirm('clear chat for everyone')
        if(data){
-        socket.emit('clearChat',{user_id1:localStorage.getItem('user1'),user_id2:localStorage.getItem('user2')})
-        socket.on('clearChat',(data)=>{
+        const clear = await axios.delete(`https://socialmedia-backend-two.vercel.app/socialmedia/message/${localStorage.getItem('user1')}/${localStorage.getItem('user2')}`)
          dispatch(UpdateMessageData({
              user_name:localStorage.getItem('user_name'),
-             messageBox:data.message
+             messageBox:clear.data.message
            }))
-        })
+       
        }
        
     }
-    function SendMessage(){
+   async function SendMessage(){
         
         if(messageInput){
-            socket.emit('sendMessage',{user_id1:localStorage.getItem('user1'),user_id2:localStorage.getItem('user2'),token:localStorage.getItem('token'),message:messageInput})
-            socket.on('sendResponse',(data)=>{
-                console.log(data)
+            const data = await axios.post(`https://socialmedia-backend-two.vercel.app/socialmedia/message/${localStorage.getItem('user1')}/${localStorage.getItem('user2')}?token=${localStorage.getItem('token')}&message=${messageInput}`)
+            
+                
                 dispatch(UpdateMessageData({
                     user_name:localStorage.getItem('user_name'),
-                    messageBox:data.message
+                    messageBox:data.data.message
                   }))
                   
                   document.getElementById('scroll').click()
                   setMessageInput('')
                   
-            })
+           
         }else{
             alert('message field  required')
         }
