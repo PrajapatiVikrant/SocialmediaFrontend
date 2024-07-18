@@ -6,7 +6,6 @@ const MessageDataSlice = createSlice({
     reducers:{
         UpdateMessageData(state,action){
             state = action.payload;
-            console.log(state)
             return state
         }
     }

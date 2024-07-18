@@ -39,7 +39,7 @@ function Message() {
    async function SendMessage(){
         
         if(messageInput){
-            const data = await axios.post(`https://socialmedia-backend-two.vercel.app/socialmedia/message/${localStorage.getItem('user1')}/${localStorage.getItem('user2')}?token=${localStorage.getItem('token')}&message=${messageInput}`)
+            const data = await axios.post(`https://black-chef-tktuc.pwskills.app:4000/socialmedia/message/${localStorage.getItem('user1')}/${localStorage.getItem('user2')}?token=${localStorage.getItem('token')}&message=${messageInput}`)
             
                 
                 dispatch(UpdateMessageData({
