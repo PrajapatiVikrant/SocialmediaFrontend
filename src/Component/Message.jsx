@@ -5,7 +5,7 @@ import { io } from "socket.io-client";
 import { useDispatch, useSelector } from "react-redux";
 import { UpdateMessageData } from "../State/Slice/MessageDataSlice";
 import { useState } from "react";
-const socket = io('https://vikrant-socialmedia-backend.vercel.app');
+const socket = io('https://socialmedia-backend-two.vercel.app');
 function Message() {
     const [messageInput,setMessageInput] = useState('')
     const [scroll,setscroll] = useState(0)

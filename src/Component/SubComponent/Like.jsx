@@ -18,7 +18,7 @@ function Like({likedata,url,id}){
         }
     }
     async function IncreaseLike(){
-        const data = await axios.post(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/post/like/${id}?token=${localStorage.getItem('token')}`) 
+        const data = await axios.post(`https://socialmedia-backend-two.vercel.app/socialmedia/post/like/${id}?token=${localStorage.getItem('token')}`) 
         console.log(data.data.message)
         if(data.data.message = "updated"){
             setLikes(likes+1);
@@ -27,7 +27,7 @@ function Like({likedata,url,id}){
        
     }
     async function DecreaseLike(){
-        const data = await axios.post(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/post/unlike/${id}?token=${localStorage.getItem('token')}`) 
+        const data = await axios.post(`https://socialmedia-backend-two.vercel.app/socialmedia/post/unlike/${id}?token=${localStorage.getItem('token')}`) 
         console.log(data.data.message)
         if(data.data.message = "updated"){
             setLikes(likes-1)

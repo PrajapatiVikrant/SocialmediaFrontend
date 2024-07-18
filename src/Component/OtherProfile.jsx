@@ -16,7 +16,7 @@ function OtherProfile(){
     getPost()
   },[])
   async function getPost(){
-        const data = await axios.get(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/post/read/${profiledata.id}`)
+        const data = await axios.get(`https://socialmedia-backend-two.vercel.app/socialmedia/post/read/${profiledata.id}`)
         setpost(data.data.message)
   }
    

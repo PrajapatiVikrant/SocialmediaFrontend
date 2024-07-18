@@ -11,7 +11,7 @@ function Login() {
     async function submitLoin(e){
         e.preventDefault()
         try {
-          const data = await axios.post(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/auth/login/${email}/${password}`);
+          const data = await axios.post(`https://socialmedia-backend-two.vercel.app/socialmedia/auth/login/${email}/${password}`);
         if(data.data.message === 'Login successfully'){
             
             setemail('')

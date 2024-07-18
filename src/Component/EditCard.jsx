@@ -34,7 +34,7 @@ function EditCard(){
     if(olddata.card=='post'){
         try {
           
-            const data =  await axios.put(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/post/update/${olddata.id}?url=${olddata.url}&title=${title}`,cardimage,{
+            const data =  await axios.put(`https://socialmedia-backend-two.vercel.app/socialmedia/post/update/${olddata.id}?url=${olddata.url}&title=${title}`,cardimage,{
         headers:{
             "Content-Type":"multipart/form-data",
         }
@@ -50,7 +50,7 @@ function EditCard(){
         
     }
     if(olddata.card=="profile"){
-    const data =  await axios.put(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/profile/${localStorage.getItem('myId')}?title=${title}&url=${olddata.url}`,cardimage,{
+    const data =  await axios.put(`https://socialmedia-backend-two.vercel.app/socialmedia/profile/${localStorage.getItem('myId')}?title=${title}&url=${olddata.url}`,cardimage,{
         headers:{
             "Content-Type":"multipart/form-data",
         }

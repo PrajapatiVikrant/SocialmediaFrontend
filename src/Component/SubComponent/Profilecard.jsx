@@ -18,7 +18,7 @@ function Profilecard(props) {
    async function getData(){
         
         if(props.profile !== "Me"){
-            const connectionstatus = await axios.get(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/profile/connectionStatus/${props.id}?token=${localStorage.getItem('token')}`);
+            const connectionstatus = await axios.get(`https://socialmedia-backend-two.vercel.app/socialmedia/profile/connectionStatus/${props.id}?token=${localStorage.getItem('token')}`);
             console.log(connectionstatus);
             setconnection(connectionstatus.data.message);
         }
@@ -28,7 +28,7 @@ function Profilecard(props) {
         if(connection === "Connected"){
                 alert("You are already connected")
         }else{
-            const data = await axios.post(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/profile/connectreq/${props.id}?token=${localStorage.getItem('token')}`)
+            const data = await axios.post(`https://socialmedia-backend-two.vercel.app/socialmedia/profile/connectreq/${props.id}?token=${localStorage.getItem('token')}`)
             setconnection(data.data.message)
         }
             

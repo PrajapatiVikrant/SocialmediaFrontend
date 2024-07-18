@@ -17,7 +17,7 @@ function Navbar(){
         const pressKey = e.key;
         if(pressKey === 'Enter'){
             
-            const data = await axios.get(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/profile/otherprofile/${search}`);
+            const data = await axios.get(`https://socialmedia-backend-two.vercel.app/socialmedia/profile/otherprofile/${search}`);
             console.log(data)
             if(data.data === "Not found"){
                 alert(data.data)

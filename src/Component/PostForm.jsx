@@ -40,7 +40,7 @@ function PostForm(){
   async function postSubmit(e){
     console.log(postimage)
     e.preventDefault()
-      const data =  await axios.post(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/post/create?title=${postttitle}&token=${localStorage.getItem('token')}`,postimage,{
+      const data =  await axios.post(`https://socialmedia-backend-two.vercel.app/socialmedia/post/create?title=${postttitle}&token=${localStorage.getItem('token')}`,postimage,{
         headers:{
             "Content-Type":"multipart/form-data",
         }

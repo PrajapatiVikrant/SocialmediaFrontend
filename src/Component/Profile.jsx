@@ -19,11 +19,11 @@ function Profile() {
         getprofiledata()
     })
     async function getprofiledata() {
-        const data = await axios.get(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/profile?token=${localStorage.getItem('token')}`);
+        const data = await axios.get(`https://socialmedia-backend-two.vercel.app/socialmedia/profile?token=${localStorage.getItem('token')}`);
         if (data.data.message === 'Not login') {
             window.location.reload();
         } else {
-            const postdata = await axios.get(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/post/read?token=${localStorage.getItem('token')}`);
+            const postdata = await axios.get(`https://socialmedia-backend-two.vercel.app/socialmedia/post/read?token=${localStorage.getItem('token')}`);
             
             setpost(postdata.data.message);
             setconnetion(data.data.connection)

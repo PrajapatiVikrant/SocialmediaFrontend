@@ -11,12 +11,12 @@ function MiniProfileCard({id,buttonText}){
     })
    async function getdata(){
    
-    const data = await axios.get(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/profile/${id}`);
+    const data = await axios.get(`https://socialmedia-backend-two.vercel.app/socialmedia/profile/${id}`);
     setProfile(data.data)
     }
    async function Connect(){
         console.log(profile.name)
-        const data = await axios.post(`https://vikrant-socialmedia-backend.vercel.app/socialmedia/profile/connect/${id}/${profile.name}?token=${localStorage.getItem('token')}`)
+        const data = await axios.post(`https://socialmedia-backend-two.vercel.app/socialmedia/profile/connect/${id}/${profile.name}?token=${localStorage.getItem('token')}`)
         console.log(data.data.message);
         alert(data.data.message)
     }
