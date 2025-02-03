@@ -33,7 +33,7 @@ function NetworkProfileCard({id}){
           localStorage.setItem('user2',data.data.user2)
           navigate('/message')
         }else{
-          alert(data.data);
+          alert(data.data.message);
         }
       }
       function fullprofile(){

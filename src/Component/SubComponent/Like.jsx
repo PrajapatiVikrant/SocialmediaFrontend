@@ -4,10 +4,17 @@ import { useState } from "react";
 function Like({likedata,url,id}){
     const [like,setLike] = useState(false)
     const [likes,setLikes] = useState(likedata.length)
+
+    
     useEffect(()=>{
-        console.log(likedata)
         checkLike()
     },[])
+
+
+
+
+
+//    checkLike funtion check that I have check any post or not
     function checkLike(){
         const myId = localStorage.getItem('myId');
         for(let i=0;i<likedata.length;i++){
@@ -17,6 +24,11 @@ function Like({likedata,url,id}){
             }
         }
     }
+
+
+
+
+    // IncreaseLike function like any post
     async function IncreaseLike(){
         const data = await axios.post(`https://socialmedia-backend-two.vercel.app/socialmedia/post/like/${id}?token=${localStorage.getItem('token')}`) 
         console.log(data.data.message)
@@ -26,6 +38,11 @@ function Like({likedata,url,id}){
         }
        
     }
+
+
+
+
+    // DecreaseLike function unlike any post
     async function DecreaseLike(){
         const data = await axios.post(`https://socialmedia-backend-two.vercel.app/socialmedia/post/unlike/${id}?token=${localStorage.getItem('token')}`) 
         console.log(data.data.message)
